@@ -1,0 +1,88 @@
+@media (max-width: 920px) {
+  .wrapper {
+    flex-direction: column;
+    .side-panel {
+      align-items: center;
+      justify-content: space-around;
+      min-height: 85px;
+      width: auto;
+      flex-direction: row;
+      .logo {
+        margin: 0;
+      }
+      &-btn {
+        display: none;
+      }
+    }
+    .section-account-settings-header__set {
+      display: none;
+    }
+    .section-account-settings-header__set.mobile {
+      display: flex;
+    }
+  }
+  .mobile-header {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper .section-account-settings-body .profile-settings {
+    .change-form-input {
+      min-width: 350px;
+    }
+    &__change-photo {
+      flex-direction: column;
+      .profile-photo {
+        margin-right: 0;
+      }
+      .choose-photo-file {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .choose-file-btn {
+      min-width: 210px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 515px) {
+  .wrapper {
+    .section-account-settings {
+      padding: 0 55px 40px 55px;
+      &-body {
+        padding: 30px 40px 50px 40px;
+        .profile-settings{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &__title {
+            width: 100%;
+            margin-top: 50px;
+          }
+          .password-btn {
+            margin: 0;
+          }
+          .change-form-input {
+            min-width: 210px;
+            padding: 0 20px;
+          }
+        }
+        &__header {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .mobile {
+    margin-right: 65px;
+  }
+  .mobile-header .burger-menu_active .burger-menu_nav {
+    width: 100%;
+  }
+}
+
+
