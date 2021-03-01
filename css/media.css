@@ -81,3 +81,11 @@
     width: 100%;
   }
 }
+@media (max-width: 340px) {
+  .wrapper .section-account-settings {
+    padding: 0 45px 40px 45px;
+  }
+  .wrapper .section-account-settings-body {
+    padding: 30px 35px 50px 35px;
+  }
+}
