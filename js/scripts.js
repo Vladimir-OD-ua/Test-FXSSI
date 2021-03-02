@@ -3,28 +3,31 @@ window.load = function() {
 };
 
 function burgerMenu(selector) {
-    let menu = $(selector);
-    let button = menu.find('.burger-menu_button', '.burger-menu_lines');
-    let links = menu.find('.burger-menu_link');
-    let overlay = menu.find('.burger-menu_overlay');
+    let menu = document.querySelector(selector);
+    let lines = menu.querySelector('.burger-menu_lines');
+    let links = menu.querySelector('.burger-menu_link');
+    let overlay = menu.querySelector('.burger-menu_overlay');
+    let body = document.querySelector('body');
 
-    button.on('click', (e) => {
+    lines.addEventListener('click', e => {
         e.preventDefault();
         toggleMenu();
     });
 
-    links.on('click', () => toggleMenu());
-    overlay.on('click', () => toggleMenu());
+    links.addEventListener('click', () => toggleMenu);
+    overlay.addEventListener('click', () => toggleMenu);
+
 
     function toggleMenu(){
-        menu.toggleClass('burger-menu_active');
-
-        if (menu.hasClass('burger-menu_active')) {
-            $('body').css('overlow', 'hidden');
+        if (menu.classList.contains('burger-menu_active')) {
+            menu.classList.remove('burger-menu_active');
+            body.style.overflow = 'visible';
         } else {
-            $('body').css('overlow', 'visible');
+            menu.classList.add('burger-menu_active');
+            body.style.overflow = 'hidden';
         }
     }
 }
+
 
 burgerMenu('.burger-menu');
